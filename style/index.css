@@ -49,6 +49,16 @@ table {
 
 /* Add CSS styling here */
 
+/* (convert widths, heights, padding to %) */
+
+* {
+    max-width: 100%;
+}
+
+header, section {
+    padding: 4% 0;
+}
+
 h1, h2, p, button {
     font-family: 'Shadows Into Light', cursive;
 }
@@ -71,18 +81,18 @@ nav {
 }
 
 .top {
-    display: flex;
-    justify-content: center;
-}
-
-.project-button {
     background-image: url(https://picsum.photos/700/400);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 700px;
-    height: 400px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.top h1 {
     color: white;
-    font-size: 1.875rem;
 }
 
 button {
@@ -103,16 +113,67 @@ button a {
     text-decoration: none;
 }
 
-.row1, .row2 {
+.row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    padding: 10px;
+}
+
+.row div {
+    width: 30%;
+    margin: 2% 0;
 }
 
 footer {
     background-color: lightgray;
     padding: 30px;
     text-align: center;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links button {
+        width: 20%;
+        margin: 1% 0;
+    }
+
+    .top {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .row div {
+        width: 40%;
+    }
 }
