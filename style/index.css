@@ -83,7 +83,7 @@ nav {
 .top {
     background-image: url(https://picsum.photos/700/400);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +133,15 @@ footer {
 }
 
 @media (max-width: 800px) {
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
 
+    .top {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @media (max-width: 500px) {
